@@ -1,0 +1,38 @@
+import { Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Services from './components/Services'
+import Testimonials from './components/Testimonials'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
+import WhatsAppButton from './components/WhatsAppButton'
+import BespokeServices from './pages/BespokeServices';
+import BookConsultation from './pages/BookConsultation';
+
+function HomePage() {
+  return (
+    <>
+      <Hero />
+      <Services />
+      <Testimonials />
+      <Contact />
+    </>
+  )
+}
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/bespoke" element={<BespokeServices />} />
+          <Route path="/book" element={<BookConsultation />} />
+        </Routes>
+      </main>
+      <Footer />
+      <WhatsAppButton />
+    </div>
+  )
+}
