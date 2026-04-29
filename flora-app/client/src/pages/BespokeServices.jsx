@@ -90,13 +90,6 @@ const BENTO = [
   },
 ];
 
-// ── Shared style helpers ──────────────────────────────────────────────────────
-
-const font = {
-  manrope: { fontFamily: "Manrope, sans-serif" },
-  serif: { fontFamily: "Noto Serif, serif" },
-};
-
 const BRAND = "#6c5842";
 const BRAND_HOVER = "#56432f";
 
@@ -107,13 +100,12 @@ function EnquireBtn({ onClick, full = false }) {
     <button
       onClick={onClick}
       style={{
-        ...font.manrope,
-        letterSpacing: "0.15em",
         backgroundColor: BRAND,
         color: "#fff",
         width: full ? "100%" : undefined,
+        letterSpacing: "0.15em",
       }}
-      className="px-10 py-4 text-[11px] font-semibold uppercase hover:opacity-80 active:opacity-70 transition-opacity"
+      className="px-10 py-4 text-label-caps font-luxury font-semibold uppercase hover:opacity-80 active:opacity-70 transition-opacity"
     >
       Enquire Now
     </button>
@@ -129,8 +121,8 @@ function ServiceExtras({ extras }) {
         {extras.items.map((b) => (
           <li
             key={b}
-            style={{ ...font.manrope, letterSpacing: "0.1em" }}
-            className="flex items-center gap-3 text-[11px] font-semibold uppercase opacity-70 text-[#1e1b18]"
+            className="flex items-center gap-3 text-label-caps font-luxury font-semibold uppercase opacity-70 text-stone-900"
+            style={{ letterSpacing: "0.1em" }}
           >
             <CheckIcon />
             {b}
@@ -146,12 +138,12 @@ function ServiceExtras({ extras }) {
         {extras.items.map((s) => (
           <div key={s.key} className="p-4 border border-[#d1c4ba] bg-[#f5ece7]">
             <p
-              style={{ ...font.manrope, letterSpacing: "0.1em" }}
-              className="text-[10px] font-semibold uppercase opacity-60 mb-2 text-[#1e1b18]"
+              className="text-[10px] font-luxury font-semibold uppercase opacity-60 mb-2 text-stone-900"
+              style={{ letterSpacing: "0.1em" }}
             >
               {s.key}
             </p>
-            <p style={font.serif} className="text-[15px] text-[#1e1b18]">
+            <p className="text-body-md font-luxury text-stone-900">
               {s.val}
             </p>
           </div>
@@ -180,12 +172,12 @@ function ServiceExtras({ extras }) {
       <div className="space-y-4 pt-2">
         {extras.items.map((f) => (
           <div key={f.name} className="flex justify-between items-center border-b border-[#d1c4ba] pb-2">
-            <span style={font.serif} className="text-[16px] text-[#1e1b18]">
+            <span className="text-body-md font-body text-stone-900">
               {f.name}
             </span>
             <span
-              style={{ ...font.manrope, letterSpacing: "0.1em" }}
-              className="text-[10px] font-semibold uppercase opacity-50 text-[#1e1b18]"
+              className="text-[10px] font-luxury font-semibold uppercase opacity-50 text-stone-900"
+              style={{ letterSpacing: "0.1em" }}
             >
               {f.type}
             </span>
@@ -217,18 +209,17 @@ function ServiceSection({ service, onEnquire }) {
   const contentEl = (
     <div className="w-full md:w-1/2 space-y-6">
       <span
-        style={{ ...font.manrope, letterSpacing: "0.3em" }}
-        className="text-[11px] font-semibold uppercase text-[#6c5842]"
+        className="text-label-caps font-luxury font-semibold uppercase text-primary"
+        style={{ letterSpacing: "0.3em" }}
       >
         {label}
       </span>
       <h2
-        style={font.manrope}
-        className="text-[32px] font-normal leading-snug text-[#1e1b18]"
+        className="text-[32px] font-luxury font-normal leading-snug text-stone-900"
       >
         {title}
       </h2>
-      <p style={font.serif} className="text-[16px] leading-relaxed text-[#4e453d]">
+      <p className="text-body-lg font-body leading-relaxed text-stone-600">
         {body}
       </p>
       <ServiceExtras extras={extras} />
@@ -257,15 +248,15 @@ function BentoSection({ onEnquire }) {
         {/* Heading */}
         <div className="text-center mb-14 space-y-3">
           <span
-            style={{ ...font.manrope, letterSpacing: "0.3em" }}
-            className="text-[11px] font-semibold uppercase text-[#6c5842]"
+            className="text-label-caps font-luxury font-semibold uppercase text-primary"
+            style={{ letterSpacing: "0.3em" }}
           >
             CURATED LIFESTYLE
           </span>
-          <h2 style={font.manrope} className="text-[32px] font-normal text-[#1e1b18]">
+          <h2 className="text-[32px] font-luxury font-normal text-stone-900">
             Interior Decoration
           </h2>
-          <p style={font.serif} className="text-[16px] text-[#4e453d] max-w-xl mx-auto">
+          <p className="text-body-lg font-body text-stone-600 max-w-xl mx-auto">
             A holistic approach to luxury living, balancing form and function through professional curation.
           </p>
         </div>
@@ -289,8 +280,8 @@ function BentoSection({ onEnquire }) {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <p
-                  style={{ ...font.manrope, letterSpacing: "0.12em" }}
-                  className="text-white text-[10px] font-semibold uppercase"
+                  className="text-white text-[10px] font-luxury font-semibold uppercase"
+                  style={{ letterSpacing: "0.12em" }}
                 >
                   {item.label}
                 </p>
@@ -303,13 +294,13 @@ function BentoSection({ onEnquire }) {
             className="md:col-span-1 md:row-span-1 flex flex-col items-center justify-center text-white p-8 text-center"
             style={{ backgroundColor: BRAND, minHeight: "220px" }}
           >
-            <h3 style={font.manrope} className="text-[22px] font-medium mb-5">
+            <h3 className="text-headline-md font-luxury font-medium mb-5">
               Start Your Project
             </h3>
             <button
               onClick={onEnquire}
-              style={{ ...font.manrope, letterSpacing: "0.15em" }}
-              className="border border-white/40 px-6 py-3 text-[11px] font-semibold uppercase hover:bg-white hover:text-[#6c5842] transition-colors"
+              className="border border-white/40 px-6 py-3 text-label-caps font-luxury font-semibold uppercase hover:bg-white hover:text-[#6c5842] transition-colors"
+              style={{ letterSpacing: "0.15em" }}
             >
               Enquire Now
             </button>
@@ -354,19 +345,19 @@ function EnquiryModal({ open, onClose }) {
 
         {submitted ? (
           <div className="text-center py-8">
-            <p style={font.manrope} className="text-[18px] font-medium text-[#6c5842] mb-2">
+            <p className="text-headline-md font-luxury font-medium text-primary mb-2">
               Thank You
             </p>
-            <p style={font.serif} className="text-[15px] text-[#4e453d]">
+            <p className="text-body-md font-body text-stone-600">
               We'll be in touch within 24 hours.
             </p>
           </div>
         ) : (
           <>
-            <h3 style={font.manrope} className="text-[22px] font-medium text-[#1e1b18] mb-2">
+            <h3 className="text-headline-md font-luxury font-medium text-stone-900 mb-2">
               Request an Enquiry
             </h3>
-            <p style={font.serif} className="text-[14px] text-[#4e453d] mb-8">
+            <p className="text-body-sm font-body text-stone-600 mb-8">
               Our design consultants will contact you within 24 hours.
             </p>
 
@@ -382,18 +373,17 @@ function EnquiryModal({ open, onClose }) {
                     type={f.type}
                     required
                     placeholder=" "
-                    style={font.serif}
-                    className="peer w-full bg-transparent border-0 border-b border-[#d1c4ba] focus:border-[#6c5842] focus:outline-none py-3 text-[15px] text-[#1e1b18] placeholder-transparent"
+                    className="peer w-full bg-transparent border-0 border-b border-[#d1c4ba] focus:border-[#6c5842] focus:outline-none py-3 text-body-md font-body text-stone-900 placeholder-transparent"
                   />
                   <label
                     htmlFor={f.id}
-                    style={{ ...font.manrope, letterSpacing: "0.1em" }}
                     className="
-                      absolute left-0 top-3 text-[10px] font-semibold uppercase text-[#7f756c]
+                      absolute left-0 top-3 text-[10px] font-luxury font-semibold uppercase text-stone-400
                       transition-all duration-200
-                      peer-focus:-top-4 peer-focus:text-[#6c5842]
-                      peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-[#6c5842]
+                      peer-focus:-top-4 peer-focus:text-primary
+                      peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-primary
                     "
+                    style={{ letterSpacing: "0.1em" }}
                   >
                     {f.label}
                   </label>
@@ -405,18 +395,17 @@ function EnquiryModal({ open, onClose }) {
                   id="message"
                   placeholder=" "
                   rows={3}
-                  style={font.serif}
-                  className="peer w-full bg-transparent border-0 border-b border-[#d1c4ba] focus:border-[#6c5842] focus:outline-none py-3 text-[15px] text-[#1e1b18] placeholder-transparent resize-none"
+                  className="peer w-full bg-transparent border-0 border-b border-[#d1c4ba] focus:border-[#6c5842] focus:outline-none py-3 text-body-md font-body text-stone-900 placeholder-transparent resize-none"
                 />
                 <label
                   htmlFor="message"
-                  style={{ ...font.manrope, letterSpacing: "0.1em" }}
                   className="
-                    absolute left-0 top-5 text-[10px] font-semibold uppercase text-[#7f756c]
+                    absolute left-0 top-5 text-[10px] font-luxury font-semibold uppercase text-stone-400
                     transition-all duration-200
-                    peer-focus:-top-2 peer-focus:text-[#6c5842]
-                    peer-[:not(:placeholder-shown)]:-top-2 peer-[:not(:placeholder-shown)]:text-[#6c5842]
+                    peer-focus:-top-2 peer-focus:text-primary
+                    peer-[:not(:placeholder-shown)]:-top-2 peer-[:not(:placeholder-shown)]:text-primary
                   "
+                  style={{ letterSpacing: "0.1em" }}
                 >
                   Your Message
                 </label>
@@ -424,8 +413,8 @@ function EnquiryModal({ open, onClose }) {
 
               <button
                 type="submit"
-                style={{ ...font.manrope, letterSpacing: "0.2em", backgroundColor: BRAND }}
-                className="w-full text-white py-4 text-[11px] font-semibold uppercase hover:opacity-80 transition-opacity flex justify-between items-center px-4"
+                className="w-full text-white py-4 text-label-caps font-luxury font-semibold uppercase hover:opacity-80 transition-opacity flex justify-between items-center px-4"
+                style={{ letterSpacing: "0.2em", backgroundColor: BRAND }}
               >
                 <span>Submit Enquiry</span>
                 <span>→</span>
@@ -469,20 +458,17 @@ export default function BespokeServicesPage() {
         </div>
         <div className="relative z-10 text-center text-white px-6">
           <h1
+            className="text-headline-xl md:text-display font-luxury font-light leading-tight mb-4"
             style={{
-              ...font.manrope,
-              fontWeight: 300,
-              fontSize: "clamp(36px, 5vw, 56px)",
-              lineHeight: 1.2,
               letterSpacing: "-0.02em",
               textShadow: "0 2px 8px rgba(0,0,0,0.25)",
-              marginBottom: "16px",
             }}
           >
             Bespoke Services
           </h1>
           <p
-            style={{ ...font.serif, fontSize: "18px", lineHeight: 1.6, maxWidth: "580px", margin: "0 auto", opacity: 0.92 }}
+            className="text-body-lg font-body max-w-lg mx-auto"
+            style={{ opacity: 0.92 }}
           >
             Elevating Abu Dhabi's finest residences through meticulous craftsmanship and curated design excellence.
           </p>

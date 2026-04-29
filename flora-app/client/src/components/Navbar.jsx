@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
+import logoUrl from '../assets/logo.png'
 
 const WHATSAPP_NUMBER = '+917736762310' // Replace with real number
 
-export default function Navbar() {
+
+export default function Navbar({ textBlack = false, logoScrolled = false }) {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -15,7 +17,7 @@ export default function Navbar() {
   const navLinks = [
     { label: 'Collections', href: '/#services' },
     { label: 'Bespoke Services', href: '/bespoke' },
-    { label: 'Showroom', href: '/#contact' },
+    { label: 'Showroom', href: '/showroom' },
     { label: 'Our Story', href: '/#contact' },
   ]
 
@@ -29,10 +31,10 @@ export default function Navbar() {
         {/* Logo */}
         <a href="/" className="flex items-center">
           <img
-            src="https://lh3.googleusercontent.com/aida/ADBb0ui9XM0eTT3djWhrIJPf2yUxpKopnkTL3NJNWVhzF9gCNYfjYFqRrvP5pW3OTwsxIFQG0kfMuPqrVJ5QYBe8zBUPANPyRI93Rxq1bpi0jzqAo0IctB66opLtyN8uLVxr0Vf1eIvHkQupkDD5t_vub41S9dZwk_25EaAeh6ub9cgi4zw_5E5fPYaPk-1rvybcw7TspFWGqfZeGDbExORr2TOcwea_3RO7QTanim4ts2bjlGrXi4ZNhbVeWAj0VyA-ZCUIIS3z7ckSuGE"
+            src={logoUrl}
             alt="FLORA Logo"
             className={`h-9 w-auto object-contain transition-all duration-300 ${
-              scrolled ? 'brightness-0' : 'brightness-0 invert'
+              logoScrolled || scrolled ? 'brightness-0' : 'brightness-0 invert'
             }`}
           />
         </a>
@@ -44,7 +46,9 @@ export default function Navbar() {
               key={link.label}
               href={link.href}
               className={`font-luxury text-sm tracking-wide transition-colors ${
-                scrolled
+                textBlack
+                  ? 'text-stone-900 hover:text-stone-700'
+                  : scrolled
                   ? 'text-stone-500 hover:text-stone-900'
                   : 'text-white/80 hover:text-white'
               }`}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Navbar from "../components/Navbar";
  
 
  
@@ -125,6 +126,7 @@ export default function BookConsultationPage() {
 
   return (
     <div style={{ backgroundColor: "#fff8f5", minHeight: "100vh" }}>
+      <Navbar textBlack={true} logoScrolled={true} />
       <main className="pt-24">
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 lg:py-28 grid lg:grid-cols-2 gap-20 xl:gap-28 items-start">
  

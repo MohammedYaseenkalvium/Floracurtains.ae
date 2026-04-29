@@ -1,3 +1,4 @@
+import logoUrl from '../assets/logo.png'
 const quickLinks = ['Collections', 'Bespoke Services', 'Showroom', 'Our Story']
 const supportLinks = ['Privacy Policy', 'Terms of Service', 'Care Instructions', 'Contact Us']
 
@@ -8,7 +9,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="space-y-6">
           <img
-            src="https://lh3.googleusercontent.com/aida/ADBb0ui9XM0eTT3djWhrIJPf2yUxpKopnkTL3NJNWVhzF9gCNYfjYFqRrvP5pW3OTwsxIFQG0kfMuPqrVJ5QYBe8zBUPANPyRI93Rxq1bpi0jzqAo0IctB66opLtyN8uLVxr0Vf1eIvHkQupkDD5t_vub41S9dZwk_25EaAeh6ub9cgi4zw_5E5fPYaPk-1rvybcw7TspFWGqfZeGDbExORr2TOcwea_3RO7QTanim4ts2bjlGrXi4ZNhbVeWAj0VyA-ZCUIIS3z7ckSuGE"
+            src={logoUrl}
             alt="FLORA"
             className="h-8 w-auto object-contain brightness-0"
           />

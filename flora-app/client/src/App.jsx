@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
 import BespokeServices from './pages/BespokeServices';
 import BookConsultation from './pages/BookConsultation';
+import ShowroomPage from './pages/Showroom'
 
 function HomePage() {
   return (
@@ -16,6 +17,7 @@ function HomePage() {
       <Services />
       <Testimonials />
       <Contact />
+      {/* <ShowroomPage /> */}
     </>
   )
 }
@@ -29,6 +31,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/bespoke" element={<BespokeServices />} />
           <Route path="/book" element={<BookConsultation />} />
+          <Route path="/showroom" element={<ShowroomPage />} />
         </Routes>
       </main>
       <Footer />
