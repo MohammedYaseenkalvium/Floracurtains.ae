@@ -9,15 +9,22 @@ import WhatsAppButton from './components/WhatsAppButton'
 import BespokeServices from './pages/BespokeServices';
 import BookConsultation from './pages/BookConsultation';
 import ShowroomPage from './pages/Showroom'
+import MobileHome from './components/mobile/mobileHomePage'
 
 function HomePage() {
   return (
     <>
+    <div className='hidden md:block'>
       <Hero />
       <Services />
       <Testimonials />
       <Contact />
       {/* <ShowroomPage /> */}
+    </div>
+
+    <div className='block md:hidden'>
+      <MobileHome/>
+    </div>
     </>
   )
 }

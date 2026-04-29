@@ -1,4 +1,5 @@
 import { useState } from 'react'
+const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER
 
 const SERVICES = [
   'Curtains & Sheers',
@@ -25,19 +26,31 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    setStatus('loading')
-    try {
-      const res = await fetch('/api/enquiries', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      })
-      if (!res.ok) throw new Error('Server error')
-      setStatus('success')
-      setForm(initialForm)
-    } catch {
-      setStatus('error')
-    }
+  //   setStatus('loading')
+  //   try {
+  //     const res = await fetch('/api/enquiries', {
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/json' },
+  //       body: JSON.stringify(form),
+  //     })
+  //     if (!res.ok) throw new Error('Server error')
+  //     setStatus('success')
+  //     setForm(initialForm)
+  //   } catch {
+  //     setStatus('error')
+  //   }
+
+    const message = encodeURIComponent(`
+Hi, I am ${form.name}
+Phone: ${form.phone}
+Service: ${form.service}
+Message: ${form.message}
+`)
+
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`
+
+  window.open(url, '_blank')
+
   }
 
   return (
