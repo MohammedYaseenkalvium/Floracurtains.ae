@@ -9,15 +9,23 @@ import WhatsAppButton from './components/WhatsAppButton'
 import BespokeServices from './pages/BespokeServices';
 import BookConsultation from './pages/BookConsultation';
 import ShowroomPage from './pages/Showroom'
+import MobileHome from './components/mobile/mobileHomePage'
+import OurStory from './pages/OurStory'
 
 function HomePage() {
   return (
     <>
+    <div className='hidden md:block'>
       <Hero />
       <Services />
       <Testimonials />
       <Contact />
       {/* <ShowroomPage /> */}
+    </div>
+
+    <div className='block md:hidden'>
+      <MobileHome/>
+    </div>
     </>
   )
 }
@@ -32,6 +40,8 @@ export default function App() {
           <Route path="/bespoke" element={<BespokeServices />} />
           <Route path="/book" element={<BookConsultation />} />
           <Route path="/showroom" element={<ShowroomPage />} />
+          <Route path="/our-story" element={<OurStory />} />
+
         </Routes>
       </main>
       <Footer />

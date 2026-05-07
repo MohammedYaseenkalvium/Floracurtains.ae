@@ -1,4 +1,5 @@
 import { useState } from 'react'
+const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER
 
 const SERVICES = [
   'Curtains & Sheers',
@@ -15,9 +16,20 @@ const initialForm = {
   message: '',
 }
 
+
+
 export default function Contact() {
   const [form, setForm] = useState(initialForm)
-  const [status, setStatus] = useState('idle') // idle | loading | success | error
+  const [status, setStatus] = useState('idle')
+  const [phoneClicked, setPhoneClicked] = useState('') // idle | loading | success | error
+  const handlePhoneClick = (phone) => {
+  setPhoneClicked(phone)
+
+  setTimeout(() => {
+    setPhoneClicked('')
+  }, 2000)
+}
+
 
   const handleChange = (e) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
@@ -25,19 +37,32 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    setStatus('loading')
-    try {
-      const res = await fetch('/api/enquiries', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      })
-      if (!res.ok) throw new Error('Server error')
-      setStatus('success')
-      setForm(initialForm)
-    } catch {
-      setStatus('error')
-    }
+  //   setStatus('loading')
+  //   try {
+  //     const res = await fetch('/api/enquiries', {
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/json' },
+  //       body: JSON.stringify(form),
+  //     })
+  //     if (!res.ok) throw new Error('Server error')
+  //     setStatus('success')
+  //     setForm(initialForm)
+  //   } catch {
+  //     setStatus('error')
+  //   }
+
+
+    const message = encodeURIComponent(`
+Hi, I am ${form.name}
+Phone: ${form.phone}
+Service: ${form.service}
+Message: ${form.message}
+`)
+
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`
+
+  window.open(url, '_blank')
+
   }
 
   return (
@@ -63,18 +88,32 @@ export default function Contact() {
               </div>
             </div>
             <div className="flex items-start gap-6">
-              <span className="material-symbols-outlined text-primary p-3 bg-stone-50 rounded-full">
-                call
-              </span>
+              <a href="tel:+97125864545"
+                  onClick={() => handlePhoneClick('phone2')}
+                  className={`material-symbols-outlined p-3 rounded-full transition-colors duration-300 ${
+                    phoneClicked==='phone2'
+                      ? 'text-white bg-primary'
+                      : 'text-primary bg-stone-50'
+                  }`}
+                >
+                  call
+                </a>
               <div>
                 <h4 className="font-luxury text-lg font-medium">Direct Line</h4>
-                <p className="text-stone-500 font-body mt-1">+971 2 586 4545</p>
+                <a href="tel:+97125864545" className="text-stone-500 font-body mt-1">+971 2 586 4545</a>
               </div>
             </div>
             <div className="flex items-start gap-6">
-              <span className="material-symbols-outlined text-primary p-3 bg-stone-50 rounded-full">
-                call
-              </span>
+              <a href="tel:+971 50 511 9982"
+                  onClick={() => handlePhoneClick('phone1')}
+                  className={`material-symbols-outlined p-3 rounded-full transition-colors duration-300 ${
+                    phoneClicked==='phone1'
+                      ? 'text-white bg-primary'
+                      : 'text-primary bg-stone-50'
+                  }`}
+                >
+                  call
+                </a>
               <div>
                 <h4 className="font-luxury text-lg font-medium">Direct Line</h4>
                 <p className="text-stone-500 font-body mt-1">+971 50 511 9982</p>

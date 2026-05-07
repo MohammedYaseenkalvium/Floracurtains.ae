@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = '+971XXXXXXXXX' // Replace with real number
+const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER
 
 export default function WhatsAppButton() {
   return (
