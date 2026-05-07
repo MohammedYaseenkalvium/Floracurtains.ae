@@ -12,7 +12,7 @@ const SERVICES = [
       type: "bullets",
       items: ["MOTORIZED SMART SOLUTIONS", "HAND-STITCHED EMBROIDERY", "ON-SITE INSTALLATION"],
     },
-    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAvRwsGp5t9FKTD91WInYcInujDjKwxThpqFGtbN_0jzWzuZZcbnj9wUe9IDL3qT3LIrNhmoYMQZIZ23Y4m31V3gzObhdq25mZJT7t8OhGfQ4p721gaxHZBpw2q12o2mufllQLQy7e7HH2heMpEiHIj1KtDJJ29cAja90rDhVaDEU34MzLNAkH3icn_qtqWLCXXLXQCnJxfSXRjAvVQzgfLA36Yhl8huFv7UTJBryNH0xbU8rx1CiXVWrAQZ_OeJpBHlH8QVA-lbf2s",
     imgAlt: "Heavy linen curtains in a bright room",
     reverse: false,
     sectionBg: "#fff8f5",
@@ -449,7 +449,7 @@ export default function BespokeServicesPage() {
       <header className="relative flex items-center justify-center overflow-hidden" style={{ height: "560px" }}>
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF0WK_0QCw4_QCPQxefJUy0UkkBfMsErD5-hbl-g7ZUK02YjJ8CS8R9UojPWBlITCkh0_5c26Hzd22PJGP-mafrCwlM984NDYehQCRglVJ6HE8gjEyWRXEtQuUb91_X2lAP_DHTFht5fP4Aw35zAZz8vd8XtqbXLFrur6nEoUeUuASzb-Gi_GnFHL5vK7VQB4E5X7SCAC0aakQ0anF4cyTH-B6-kS7RvJmE453CsTcxPLIePZHPicVCkKYnCPPEbx_Mxpgo2GC-ymU"
             alt="Luxury interior showroom"
             className="w-full h-full object-cover"
             style={{ filter: "brightness(0.85)" }}

@@ -18,7 +18,7 @@ export default function Navbar({ textBlack = false, logoScrolled = false }) {
     { label: 'Collections', href: '/#services' },
     { label: 'Bespoke Services', href: '/bespoke' },
     { label: 'Showroom', href: '/showroom' },
-    { label: 'Our Story', href: '/#contact' },
+    { label: 'Our Story', href: '/our-story' },
   ]
 
   return (
