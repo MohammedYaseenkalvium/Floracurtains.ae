@@ -10,7 +10,7 @@ import Contact from './components/Contact'
 import BookConsultation from './pages/BookConsultation'
 
 import BespokeServices from './pages/BespokeServices'
-import MobileHomePage from './components/mobile/MobileHomePage';
+import MobileHomePage from './components/mobile/mobileHomePage';
 
 
 // function HomePage() {

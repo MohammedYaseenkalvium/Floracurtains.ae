@@ -629,32 +629,32 @@
 //   );
 // }
 
-import MobileNavbar from './MobileNavbar'
-import MobileHero from './MobileHero'
-import MobileCategories from './MobileCategories'
-import MobileTestimonials from './MobileTestimonials'
-import MobileEnquiry from './MobileEnquiry'
-import MobileFooter from './MobileFooter'
-import MobileBottomNav from './MobileBottomNav'
+// import MobileNavbar from './MobileNavbar'
+// import MobileHero from './MobileHero'
+// import MobileCategories from './MobileCategories'
+// import MobileTestimonials from './MobileTestimonials'
+// import MobileEnquiry from './MobileEnquiry'
+// import MobileFooter from './MobileFooter'
+// import MobileBottomNav from './MobileBottomNav'
 
-export default function MobileHomePage() {
-  return (
-    <div className="bg-[#F8F5F2] text-[#1A1A1A] overflow-x-hidden">
+// export default function MobileHomePage() {
+//   return (
+//     <div className="bg-[#F8F5F2] text-[#1A1A1A] overflow-x-hidden">
 
-      <MobileNavbar />
+//       <MobileNavbar />
 
-      <MobileHero />
+//       <MobileHero />
 
-      <MobileCategories />
+//       <MobileCategories />
 
-      <MobileTestimonials />
+//       <MobileTestimonials />
 
-      <MobileEnquiry />
+//       <MobileEnquiry />
 
-      <MobileFooter />
+//       <MobileFooter />
 
-      <MobileBottomNav />
+//       <MobileBottomNav />
 
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
