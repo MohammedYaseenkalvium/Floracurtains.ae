@@ -29,3 +29,127 @@
     opacity: 0;
   }
 }
+
+.glass-nav {
+  background: rgba(18, 18, 18, 0.52);
+
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  transition:
+    background 0.5s ease,
+    border 0.5s ease,
+    box-shadow 0.5s ease,
+    transform 0.5s ease;
+}
+
+.glass-nav-scrolled {
+  background: rgba(15, 15, 15, 0.45);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  transform: scale(0.985);
+}
+@layer components {
+
+
+  .hero-heading {
+    @apply font-luxury
+    text-[clamp(3.5rem,6vw,8rem)]
+    leading-[0.92]
+    text-white;
+    
+  }
+
+  .section-heading {
+    @apply font-luxury
+    text-[clamp(2.5rem,4vw,4.5rem)]
+    leading-[1.02]
+    text-[#1A1A1A];
+  }
+
+  .section-label {
+    @apply font-body
+    text-xs
+    font-semibold
+    tracking-[0.22em]
+    uppercase
+    text-[#C8A97E];
+  }
+
+  .body-text {
+    @apply font-body
+    text-[1rem]
+    leading-[1.9]
+    text-stone-500;
+  }
+
+  .luxury-button {
+    @apply inline-flex
+    items-center
+    justify-center
+    px-10
+    py-5
+    rounded-full
+    font-body
+    text-xs
+    font-semibold
+    uppercase
+    tracking-[0.2em]
+    transition-all
+    duration-300;
+  }
+
+  .primary-button {
+    @apply luxury-button
+    bg-[#5A0E12]
+    text-white
+    hover:bg-[#74171C];
+  }
+
+  .secondary-button {
+    @apply luxury-button
+    border
+    border-white/30
+    text-white
+    hover:bg-white/10;
+  }
+
+  .story-section {
+    @apply flex
+    flex-col
+    min-h-[70vh]
+    bg-[#F8F5F2];
+  }
+
+  .story-image {
+    @apply w-full
+    md:w-[58%]
+    h-[50vh]
+    md:h-auto
+    overflow-hidden;
+  }
+
+  .story-content {
+    @apply w-full
+    md:w-[42%]
+    flex
+    items-center
+    px-8
+    md:px-16
+    lg:px-20
+    py-16;
+  }
+}

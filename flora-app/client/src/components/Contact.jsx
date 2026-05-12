@@ -104,7 +104,7 @@ Message: ${form.message}
               </div>
             </div>
             <div className="flex items-start gap-6">
-              <a href="tel:+971 50 511 9982"
+              <a href="tel:+971 55 746 4100"
                   onClick={() => handlePhoneClick('phone1')}
                   className={`material-symbols-outlined p-3 rounded-full transition-colors duration-300 ${
                     phoneClicked==='phone1'
@@ -116,7 +116,7 @@ Message: ${form.message}
                 </a>
               <div>
                 <h4 className="font-luxury text-lg font-medium">Direct Line</h4>
-                <p className="text-stone-500 font-body mt-1">+971 50 511 9982</p>
+                <p className="text-stone-500 font-body mt-1">+971 55 746 4100</p>
               </div>
             </div>
           </div>

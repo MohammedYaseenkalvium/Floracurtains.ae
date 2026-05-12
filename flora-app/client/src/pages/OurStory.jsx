@@ -579,8 +579,8 @@ export default function FloraCurtains() {
               />
             </div>
             <div className="flora-hero-content">
-              <p className="flora-hero-est">Est. 1994 Abu Dhabi</p>
-              <h1 className="flora-hero-title">A Legacy of Elegance Since 1994</h1>
+              <p className="flora-hero-est">Est. 1997 Abu Dhabi</p>
+              <h1 className="flora-hero-title">A Legacy of Elegance Since 1997</h1>
               <div className="flora-hero-scroll">
                 <span className="material-symbols-outlined flora-bounce" style={{ color: "#fff", fontSize: 36 }}>expand_more</span>
               </div>
@@ -628,7 +628,7 @@ export default function FloraCurtains() {
                 <div className="flora-timeline-line" />
                 <div className="flora-timeline-grid">
                   {[
-                    { year: "1994", title: "Founded in Abu Dhabi", desc: "The inaugural Flora Curtains atelier opens its doors, specializing in artisanal embroidery and bespoke drapery." },
+                    { year: "1997", title: "Founded in Abu Dhabi", desc: "The inaugural Flora Curtains atelier opens its doors, specializing in artisanal embroidery and bespoke drapery." },
                     { year: "2015", title: "Bespoke Collection", desc: "Launched the award-winning 'Artisan's Hand' collection, celebrating traditional weaving techniques in a modern context." },
                     { year: "2024", title: "Modern Atelier", desc: "Reimagining our heritage with sustainable practices and next-generation smart home integrations." },
                   ].map(({ year, title, desc }) => (
